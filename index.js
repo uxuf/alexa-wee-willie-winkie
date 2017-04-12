@@ -8,7 +8,7 @@ exports.handler = function(event, context, callback) {
 
 var handlers = {
     'PastNineOClockIntent': function() {
-        var nineOClock = Date.now();
+        var nineOClock = new Date();
         nineOClock.setHours(21);
         nineOClock.setMinutes(0);
         if (nineOClock - Date.now() > 0) {
